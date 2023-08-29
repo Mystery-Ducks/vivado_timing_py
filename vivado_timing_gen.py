@@ -12,6 +12,9 @@
 
 import time # imports the time library.
             # The time library is used to get the current system time for the output file name.
+import sys # Need this lib to check the python version.
+if sys.version_info[0] > 2:
+    from six.moves import input as raw_input # Python 3+ does not like raw_input - this fixes that issue
 
 print("\nThis will create a file with vivado timing code that you can paste under each input")
 print("The file will be created in the local directory")
