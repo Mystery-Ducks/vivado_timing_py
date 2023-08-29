@@ -26,6 +26,7 @@ bitsNumber = int(bitsNumber)    # Converts the raw input to an integer.
 if bitsNumber > 16: # Checks to see if the user has input an appropriate number
     print("\nToo many bits. File would be huge!")
     print("\n***** EXITING *****\n")
+    raise Exception("bitsNumber too large") 
     exit()
 
 timeStep = raw_input("What is your time step in nanoseconds? ")
